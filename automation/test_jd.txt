@@ -1,0 +1,17 @@
+Java Backend Developer Intern
+
+Company: Tech Solutions
+
+Location: Hyderabad
+
+Job Description:
+
+We are looking for a Java Backend Developer Intern to join our engineering team.
+
+The candidate should have knowledge of Java, Spring Boot, REST APIs, SQL and Git.
+
+Experience with Data Structures and Algorithms and backend development is preferred.
+
+The intern will work on backend services, API development, database integration and software engineering tasks.
+
+Good problem-solving and communication skills are required.

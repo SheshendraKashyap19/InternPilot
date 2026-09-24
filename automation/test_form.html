@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Internship Application - Test 2</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        .company {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .field {
+            margin-bottom: 22px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 11px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        textarea {
+            min-height: 100px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .radio-option input {
+            width: auto;
+        }
+
+        .checkbox {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .checkbox input {
+            width: auto;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            background: #222;
+            color: white;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h1>Backend Software Engineering Intern</h1>
+
+    <div class="company">
+        CloudNova Technologies — Hyderabad
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- JOB DESCRIPTION -->
+    <!-- ================================================== -->
+
+    <section id="job-description">
+
+        <h2>About the Role</h2>
+
+        <p>
+            We are looking for a Backend Software Engineering
+            Intern to join our engineering team.
+        </p>
+
+        <h3>Responsibilities</h3>
+
+        <p>
+            Develop backend applications using Java and
+            Spring Boot. Build REST APIs and work with
+            SQL databases. Use Git and GitHub for version
+            control.
+        </p>
+
+        <h3>Requirements</h3>
+
+        <p>
+            Currently pursuing Computer Science or a related
+            degree. Knowledge of Java, OOP, Spring Boot,
+            REST APIs, SQL and Git.
+        </p>
+
+        <h3>Preferred</h3>
+
+        <p>
+            Python, React.js, machine learning and NLP
+            experience.
+        </p>
+
+    </section>
+
+
+    <hr>
+
+
+    <h2>Application Form</h2>
+
+
+    <!-- ================================================== -->
+    <!-- NAME -->
+    <!-- ================================================== -->
+
+    <div class="field">
+
+        <label>
+            Applicant Full Name
+        </label>
+
+        <input
+            type="text"
+            name="candidate"
+        >
+
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- EMAIL -->
+    <!-- ================================================== -->
+
+    <div class="field">
+
+        <label>
+            Contact Email Address
+        </label>
+
+        <input
+            type="email"
+            name="contactEmail"
+        >
+
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- PHONE -->
+    <!-- ================================================== -->
+
+    <div class="field">
+
+        <label>
+            Mobile Number
+        </label>
+
+        <input
+            type="text"
+            name="mobileNumber"
+        >
+
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- UNIVERSITY -->
+    <!-- ================================================== -->
+
+    <div class="field">
+
+        <label>
+            University / Institution
+        </label>
+
+        <input
+            type="text"
+            name="institution"
+        >
+
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- INTERNSHIP -->
+    <!-- ================================================== -->
+
+    <div class="field">
+
+        <label>
+            Have you completed an internship before?
+        </label>
+
+        <select name="priorExperience">
+
+            <option value="">
+                Select
+            </option>
+
+            <option value="Yes">
+                Yes
+            </option>
+
+            <option value="No">
+                No
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- WORK MODE -->
+    <!-- ================================================== -->
+
+    <div class="field">
+
+        <label>
+            Preferred Working Arrangement
+        </label>
+
+        <div class="radio-group">
+
+            <div class="radio-option">
+
+                <input
+                    type="radio"
+                    name="workingArrangement"
+                    value="Remote"
+                >
+
+                <span>
+                    Remote
+                </span>
+
+            </div>
+
+
+            <div class="radio-option">
+
+                <input
+                    type="radio"
+                    name="workingArrangement"
+                    value="Hybrid"
+                >
+
+                <span>
+                    Hybrid
+                </span>
+
+            </div>
+
+
+            <div class="radio-option">
+
+                <input
+                    type="radio"
+                    name="workingArrangement"
+                    value="On-site"
+                >
+
+                <span>
+                    On-site
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- QUESTION 1 -->
+    <!-- ================================================== -->
+
+    <div class="field">
+
+        <label>
+            Please introduce yourself and describe your
+            technical background.
+        </label>
+
+        <textarea
+            name="technicalBackground"
+        ></textarea>
+
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- QUESTION 2 -->
+    <!-- ================================================== -->
+
+    <div class="field">
+
+        <label>
+            What attracts you to this internship?
+        </label>
+
+        <textarea
+            name="motivation"
+        ></textarea>
+
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- QUESTION 3 -->
+    <!-- ================================================== -->
+
+    <div class="field">
+
+        <label>
+            What makes you a suitable candidate for this role?
+        </label>
+
+        <textarea
+            name="candidateFit"
+        ></textarea>
+
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- CONFIRMATION -->
+    <!-- ================================================== -->
+
+    <div class="field">
+
+        <label class="checkbox">
+
+            <input
+                type="checkbox"
+                name="truthConfirmation"
+            >
+
+            I confirm that the information provided is
+            accurate.
+
+        </label>
+
+    </div>
+
+
+    <!-- ================================================== -->
+    <!-- SUBMIT -->
+    <!-- ================================================== -->
+
+    <button
+        type="button"
+        id="submitApplication"
+    >
+        Submit Application
+    </button>
+
+
+</div>
+
+
+<script>
+
+document
+    .getElementById("submitApplication")
+    .addEventListener(
+        "click",
+        function () {
+
+            alert(
+                "TEST: Submit button clicked."
+            );
+
+        }
+    );
+
+</script>
+
+</body>
+
+</html>

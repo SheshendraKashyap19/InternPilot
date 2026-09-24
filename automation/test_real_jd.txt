@@ -1,0 +1,27 @@
+Software Engineering Intern
+
+Company: Example Technologies
+
+We are looking for a Software Engineering Intern to join our engineering team.
+
+Responsibilities:
+- Develop backend applications using Java and Spring Boot.
+- Build and maintain REST APIs.
+- Work with SQL databases.
+- Use Git and GitHub for version control.
+- Collaborate with engineers on software development projects.
+- Write clean and maintainable code.
+- Debug and test applications.
+
+Requirements:
+- Currently pursuing a degree in Computer Science or related field.
+- Knowledge of Java and object-oriented programming.
+- Familiarity with Spring Boot and REST APIs.
+- Knowledge of SQL.
+- Familiarity with Git.
+- Strong problem-solving and communication skills.
+
+Preferred:
+- Python knowledge.
+- React.js familiarity.
+- Machine learning or NLP project experience.

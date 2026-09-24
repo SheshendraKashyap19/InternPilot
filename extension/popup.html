@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InternPilot</title>
+
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h1>🚀 InternPilot</h1>
+
+    <p class="subtitle">
+        AI Internship Application Assistant
+    </p>
+
+
+    <!-- RESUME -->
+
+    <label for="resumeFile">
+        Resume / CV
+    </label>
+
+    <input
+        type="file"
+        id="resumeFile"
+        accept=".pdf,.doc,.docx"
+    >
+
+
+    <!-- WORK MODE -->
+
+    <label for="workMode">
+        Preferred Work Mode
+    </label>
+
+    <select id="workMode">
+
+        <option value="">
+            Let InternPilot decide
+        </option>
+
+        <option value="Remote">
+            Remote
+        </option>
+
+        <option value="Hybrid">
+            Hybrid
+        </option>
+
+        <option value="On-site">
+            On-site
+        </option>
+
+    </select>
+
+
+    <!-- PREVIOUS INTERNSHIP -->
+
+    <label for="previousInternship">
+        Previous Internship
+    </label>
+
+    <select id="previousInternship">
+
+        <option value="">
+            Let InternPilot decide
+        </option>
+
+        <option value="Yes">
+            Yes
+        </option>
+
+        <option value="No">
+            No
+        </option>
+
+    </select>
+
+
+    <button id="analyzeButton">
+        🔍 Analyze Page
+    </button>
+
+
+    <button
+        id="autofillButton"
+        disabled
+    >
+        ✨ Autofill
+    </button>
+
+
+    <div id="status">
+        Ready
+    </div>
+
+
+    <div id="result"></div>
+
+</div>
+
+
+<script src="popup.js"></script>
+
+</body>
+
+</html>

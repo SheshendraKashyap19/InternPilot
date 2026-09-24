@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>InternPilot Multi-Step Test</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .progress {
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        #success {
+            display: none;
+            padding: 20px;
+            background: #e8f5e9;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>InternPilot Test Application</h1>
+
+    <div class="progress">
+        Step <span id="stepNumber">1</span> of 3
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- STEP 1 -->
+    <!-- ================================================= -->
+
+    <div class="step active" id="step1">
+
+        <h2>Personal Information</h2>
+
+
+        <!-- FULL NAME -->
+
+        <label>Full Name</label>
+
+        <input
+            type="text"
+            name="candidate"
+            id="candidate"
+            placeholder="Full Name"
+        >
+
+
+        <!-- EMAIL -->
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            name="contactEmail"
+            id="contactEmail"
+            placeholder="Email Address"
+        >
+
+
+        <!-- MOBILE -->
+
+        <label>Mobile Number</label>
+
+        <input
+            type="text"
+            name="mobileNumber"
+            id="mobileNumber"
+            placeholder="Mobile Number"
+        >
+
+
+        <!-- UNIVERSITY -->
+
+        <label>University</label>
+
+        <input
+            type="text"
+            name="institution"
+            id="institution"
+            placeholder="University / College"
+        >
+
+
+        <!-- LINKEDIN -->
+
+        <label>LinkedIn URL</label>
+
+        <input
+            type="url"
+            name="linkedin"
+            id="linkedin"
+            placeholder="https://www.linkedin.com/in/your-profile"
+        >
+
+
+        <!-- GITHUB -->
+
+        <label>GitHub URL</label>
+
+        <input
+            type="url"
+            name="github"
+            id="github"
+            placeholder="https://github.com/your-username"
+        >
+
+
+        <button
+            type="button"
+            id="next1"
+        >
+            Next
+        </button>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- STEP 2 -->
+    <!-- ================================================= -->
+
+    <div class="step" id="step2">
+
+        <h2>Technical Information</h2>
+
+
+        <!-- TECHNICAL SKILLS -->
+
+        <label>Technical Skills</label>
+
+        <textarea
+            name="technicalBackground"
+            id="technicalBackground"
+            placeholder="Describe your technical skills"
+        ></textarea>
+
+
+        <!-- WHY INTERESTED -->
+
+        <label>
+            Why are you interested in this internship?
+        </label>
+
+        <textarea
+            name="motivation"
+            id="motivation"
+            placeholder="Why are you interested?"
+        ></textarea>
+
+
+        <!-- WHY HIRE -->
+
+        <label>
+            Why should we hire you?
+        </label>
+
+        <textarea
+            name="candidateFit"
+            id="candidateFit"
+            placeholder="Why are you a good fit?"
+        ></textarea>
+
+
+        <button
+            type="button"
+            id="back2"
+        >
+            Back
+        </button>
+
+        <button
+            type="button"
+            id="next2"
+        >
+            Continue
+        </button>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- STEP 3 -->
+    <!-- ================================================= -->
+
+    <div class="step" id="step3">
+
+        <h2>Final Review</h2>
+
+
+        <!-- PREVIOUS INTERNSHIP -->
+
+        <label>Previous Internship</label>
+
+        <select name="priorExperience">
+
+            <option value="">
+                Select
+            </option>
+
+            <option value="Yes">
+                Yes
+            </option>
+
+            <option value="No">
+                No
+            </option>
+
+        </select>
+
+
+        <!-- WORK MODE -->
+
+        <label>Preferred Work Mode</label>
+
+
+        <label>
+
+            <input
+                type="radio"
+                name="workingArrangement"
+                value="Remote"
+            >
+
+            Remote
+
+        </label>
+
+
+        <label>
+
+            <input
+                type="radio"
+                name="workingArrangement"
+                value="Hybrid"
+            >
+
+            Hybrid
+
+        </label>
+
+
+        <label>
+
+            <input
+                type="radio"
+                name="workingArrangement"
+                value="On-site"
+            >
+
+            On-site
+
+        </label>
+
+
+        <!-- CONFIRMATION -->
+
+        <label>
+
+            <input
+                type="checkbox"
+                name="truthConfirmation"
+            >
+
+            I confirm that the information provided
+            is accurate.
+
+        </label>
+
+
+        <button
+            type="button"
+            id="back3"
+        >
+            Back
+        </button>
+
+
+        <!-- IMPORTANT:
+             InternPilot must NEVER click this button.
+        -->
+
+        <button
+            type="button"
+            id="submitApplication"
+        >
+            Submit Application
+        </button>
+
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- SUCCESS MESSAGE -->
+    <!-- ================================================= -->
+
+    <div id="success">
+
+        <h2>Application Submitted</h2>
+
+        <p>
+            This is only a test application.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script>
+
+let currentStep = 1;
+
+
+// =====================================================
+// SHOW STEP
+// =====================================================
+
+function showStep(step) {
+
+    document
+        .querySelectorAll(".step")
+        .forEach(
+            element => {
+
+                element.classList.remove("active");
+
+            }
+        );
+
+
+    document
+        .getElementById(
+            "step" + step
+        )
+        .classList.add("active");
+
+
+    document
+        .getElementById(
+            "stepNumber"
+        )
+        .innerText = step;
+
+
+    currentStep = step;
+
+}
+
+
+// =====================================================
+// STEP 1 → STEP 2
+// =====================================================
+
+document
+    .getElementById("next1")
+    .addEventListener(
+        "click",
+        function() {
+
+            showStep(2);
+
+        }
+    );
+
+
+// =====================================================
+// STEP 2 → STEP 1
+// =====================================================
+
+document
+    .getElementById("back2")
+    .addEventListener(
+        "click",
+        function() {
+
+            showStep(1);
+
+        }
+    );
+
+
+// =====================================================
+// STEP 2 → STEP 3
+// =====================================================
+
+document
+    .getElementById("next2")
+    .addEventListener(
+        "click",
+        function() {
+
+            showStep(3);
+
+        }
+    );
+
+
+// =====================================================
+// STEP 3 → STEP 2
+// =====================================================
+
+document
+    .getElementById("back3")
+    .addEventListener(
+        "click",
+        function() {
+
+            showStep(2);
+
+        }
+    );
+
+
+// =====================================================
+// FAKE SUBMIT
+// =====================================================
+
+document
+    .getElementById("submitApplication")
+    .addEventListener(
+        "click",
+        function() {
+
+            document
+                .getElementById("step3")
+                .style.display = "none";
+
+
+            document
+                .getElementById("success")
+                .style.display = "block";
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
