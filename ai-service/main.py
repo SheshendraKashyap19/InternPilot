@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import re
 import requests
-
+import os
 
 app = FastAPI(
     title="InternPilot AI Service",
@@ -25,7 +25,10 @@ class TailorRequest(BaseModel):
 # CONFIGURATION
 # ============================================================
 
-SPRING_BOOT_URL = "http://localhost:8080"
+SPRING_BOOT_URL = os.getenv(
+    "SPRING_BOOT_URL",
+    "http://localhost:8080"
+)
 
 
 # ============================================================

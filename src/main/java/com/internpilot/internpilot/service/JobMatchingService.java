@@ -68,8 +68,8 @@ public class JobMatchingService {
             }
         }
 
-        int totalSkills =
-                matchedSkills.size() + missingSkills.size();
+        int totalSkills
+                = matchedSkills.size() + missingSkills.size();
 
         int score = 0;
 

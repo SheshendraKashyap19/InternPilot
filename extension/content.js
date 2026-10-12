@@ -2596,7 +2596,72 @@ function clickNext() {
 
 }
 
+function detectApplicationQuestions() {
+    const questions = [];
 
+    // Greenhouse application questions are commonly associated
+    // with labels, legends, textareas, and input fields.
+    const fields = document.querySelectorAll(
+        'textarea, input[type="text"], input[type="url"], input[type="email"]'
+    );
+
+    fields.forEach((field, index) => {
+        // Ignore hidden fields
+        if (field.offsetParent === null) {
+            return;
+        }
+
+        let question = "";
+
+        // Try to find an associated label
+        if (field.id) {
+            const label = document.querySelector(
+                `label[for="${CSS.escape(field.id)}"]`
+            );
+
+            if (label) {
+                question = label.innerText.trim();
+            }
+        }
+
+        // Try closest label
+        if (!question) {
+            const parentLabel = field.closest("label");
+
+            if (parentLabel) {
+                question = parentLabel.innerText.trim();
+            }
+        }
+
+        // Try previous nearby text
+        if (!question) {
+            const container = field.closest(
+                ".field, .application-question, .input, .select"
+            );
+
+            if (container) {
+                const textElement = container.querySelector(
+                    "label, legend, .label"
+                );
+
+                if (textElement) {
+                    question = textElement.innerText.trim();
+                }
+            }
+        }
+
+        if (question) {
+            questions.push({
+                index,
+                question,
+                fieldType: field.tagName.toLowerCase(),
+                inputType: field.type || null
+            });
+        }
+    });
+
+    return questions;
+}
 // ============================================================
 // PAGE ANALYSIS
 // ============================================================
@@ -2673,6 +2738,9 @@ function analyzePage() {
             questionType:
                 applicationType.questionType ||
                 null
+            const questions = detectApplicationQuestions();
+
+            console.log("InternPilot detected questions:", questions);
 
         });
 
