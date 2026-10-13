@@ -10,7 +10,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/jobs")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173", "https://intern-pilot-chi.vercel.app"})
 public class JobController {
 
     private final JobRepository jobRepository;
@@ -40,8 +40,8 @@ public class JobController {
             @RequestBody List<String> resumeSkills) {
 
         Job job = jobRepository.findById(jobId)
-                .orElseThrow(() ->
-                        new RuntimeException("Job not found"));
+                .orElseThrow(()
+                        -> new RuntimeException("Job not found"));
 
         return jobMatchingService.calculateMatch(
                 resumeSkills,
