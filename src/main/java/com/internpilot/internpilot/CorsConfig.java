@@ -1,4 +1,4 @@
-﻿package com.internpilot.internpilot;
+package com.internpilot.internpilot;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
