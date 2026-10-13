@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-const API_BASE_URL = "";
+const API_BASE_URL = "https://internpilot-z3ap.onrender.com";
 const RESUME_FILE_NAME = "24EG105V33_P.SHESHENDRAKASHYAP.pdf";
 
 /* ======================== APP ======================== */
