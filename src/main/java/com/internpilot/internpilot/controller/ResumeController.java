@@ -22,7 +22,7 @@ import com.internpilot.internpilot.service.StudentProfileService;
 
 @RestController
 @RequestMapping("/api/resume")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173", "https://intern-pilot-chi.vercel.app"})
 public class ResumeController {
 
     private final String uploadDir = "uploads/";
